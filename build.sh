@@ -1,14 +1,14 @@
 #!/bin/bash
 
-TOOLCHAIN="/home/gustavo/toolchain-a9/bin/arm-cortex_a9-linux-gnueabihf-"
-STRIP="/home/gustavo/toolchain-a9/bin/arm-cortex_a9-linux-gnueabihf-strip"
+TOOLCHAIN="/home/josh/toolchain-a9/bin/arm-cortex_a9-linux-gnueabihf-"
+STRIP="/home/josh/toolchain-a9/bin/arm-cortex_a9-linux-gnueabihf-strip"
 OUTDIR="out/zip"
-INITRAMFS_SOURCE="/home/gustavo/kernel/out/ramdisk/i9100.list"
-RAMDISK="/home/gustavo/kernel/out/ramdisk/initramfs_files"
-RAMDISK_OUT="/home/gustavo/kernel/out/ramdisk/boot.cpio"
-MODULES=("/home/gustavo/kernel/net/sunrpc/auth_gss/auth_rpcgss.ko" "/home/gustavo/kernel/fs/cifs/cifs.ko" "drivers/net/wireless/bcmdhd/dhd.ko" "/home/gustavo/kernel/fs/lockd/lockd.ko" "/home/gustavo/kernel/fs/nfs/nfs.ko" "/home/gustavo/kernel/net/sunrpc/auth_gss/rpcsec_gss_krb5.ko" "drivers/scsi/scsi_wait_scan.ko" "drivers/samsung/fm_si4709/Si4709_driver.ko" "/home/gustavo/kernel/net/sunrpc/sunrpc.ko")
-KERNEL_DIR="/home/gustavo/kernel"
-MODULES_DIR="/home/gustavo/kernel/out/zip/system/lib/modules"
+INITRAMFS_SOURCE="/home/josh/kernel/out/ramdisk/i9100.list"
+RAMDISK="/home/josh/kernel/out/ramdisk/initramfs_files"
+RAMDISK_OUT="/home/josh/kernel/out/ramdisk/boot.cpio"
+MODULES=("/home/josh/kernel/net/sunrpc/auth_gss/auth_rpcgss.ko" "/home/josh/kernel/fs/cifs/cifs.ko" "drivers/net/wireless/bcmdhd/dhd.ko" "/home/josh/kernel/fs/lockd/lockd.ko" "/home/josh/kernel/fs/nfs/nfs.ko" "/home/josh/kernel/net/sunrpc/auth_gss/rpcsec_gss_krb5.ko" "drivers/scsi/scsi_wait_scan.ko" "drivers/samsung/fm_si4709/Si4709_driver.ko" "/home/josh/kernel/net/sunrpc/sunrpc.ko")
+KERNEL_DIR="/home/josh/kernel"
+MODULES_DIR="/home/josh/kernel/out/zip/system/lib/modules"
 CURRENTDATE=$(date +"%d-%m")
 
 case "$1" in
