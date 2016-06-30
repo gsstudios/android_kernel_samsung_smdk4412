@@ -834,5 +834,9 @@
 #define TUN_SOCKET__RECV_MSG                      0x00080000UL
 #define TUN_SOCKET__SEND_MSG                      0x00100000UL
 #define TUN_SOCKET__NAME_BIND                     0x00200000UL
+#define BINDER__IMPERSONATE                       0x00000001UL
+#define BINDER__CALL                              0x00000002UL
+#define BINDER__SET_CONTEXT_MGR                   0x00000004UL
+#define BINDER__TRANSFER                          0x00000008UL
 
 #endif

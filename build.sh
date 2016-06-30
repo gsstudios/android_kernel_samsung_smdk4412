@@ -41,10 +41,6 @@ case "$1" in
 		echo "Creating kernel zip..."
         zip -r cm13-kernel-$CURRENTDATE.zip ./ -x *.zip *.gitignore
         
-        
-        cd ${KERNEL_DIR}
-        patch -p1 < ${KERNEL_DIR}/trim.patch
-        
 		echo "Done!"
 	    ;;
 esac

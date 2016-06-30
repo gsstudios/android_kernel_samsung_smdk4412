@@ -51,6 +51,7 @@
 #define SECCLASS_CAPABILITY2                             47
 #define SECCLASS_KERNEL_SERVICE                          48
 #define SECCLASS_TUN_SOCKET                              49
+#define SECCLASS_BINDER                                  50
 
 #define SECINITSID_KERNEL                                   1
 #define SECINITSID_SECURITY                                 2
