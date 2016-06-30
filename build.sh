@@ -16,7 +16,7 @@ case "$1" in
         cd ${KERNEL_DIR}
         make clean && make mrproper
 		;;
-	lp)
+	mm)
         # compress the ramdisk in cpio
         cd ${RAMDISK}
         rm *.cpio
@@ -39,16 +39,8 @@ case "$1" in
         cp arch/arm/boot/zImage ${OUTDIR}
         cd ${OUTDIR}
 		echo "Creating kernel zip..."
-        zip -r cm12.1-kernel-$CURRENTDATE.zip ./ -x *.zip *.gitignore
+        zip -r cm13-kernel-$CURRENTDATE.zip ./ -x *.zip *.gitignore
         
-         # build the kernel without trim
-        #cd ${KERNEL_DIR}
-       # patch -Rp1 < trim.patch
-       #make -j3 ARCH=arm CROSS_COMPILE=${TOOLCHAIN} CONFIG_INITRAMFS_SOURCE=${INITRAMFS_SOURCE}
-      #  cp arch/arm/boot/zImage ${OUTDIR}
-      #  cd ${OUTDIR}
-	#	echo "Creating kk CWM kernel zip..."
-      #  zip -r kk-kernel-$CURRENTDATE-CWM.zip ./ -x *.zip *.gitignore
         
         cd ${KERNEL_DIR}
         patch -p1 < ${KERNEL_DIR}/trim.patch
