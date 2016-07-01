@@ -16,7 +16,7 @@ case "$1" in
         cd ${KERNEL_DIR}
         make clean && make mrproper
 		;;
-	mm)
+	lp)
         # compress the ramdisk in cpio
         cd ${RAMDISK}
         rm *.cpio
@@ -39,7 +39,7 @@ case "$1" in
         cp arch/arm/boot/zImage ${OUTDIR}
         cd ${OUTDIR}
 		echo "Creating kernel zip..."
-        zip -r cm13-kernel-$CURRENTDATE.zip ./ -x *.zip *.gitignore
+        zip -r cm12.1-kernel-$CURRENTDATE.zip ./ -x *.zip *.gitignore
         
 		echo "Done!"
 	    ;;
